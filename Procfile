@@ -1,0 +1,1 @@
+web: gunicorn consultaonline.wsgi --log-file -
