@@ -8,9 +8,18 @@ class Consultorio(models.Model):
 	nome = models.CharField(max_length=30)
 	senha = models.CharField(max_length=30)
 
+	def __str__(self):
+		return self.nome
+
 class Consulta(models.Model):
-	telefone = models.CharField(max_length=20, null=False)
-	mensagem = models.CharField(max_length=255, null=False)
+	email = models.CharField(max_length=50, null=False)
+	nome = models.CharField(max_length=50, null=False)
 	hora = models.DateTimeField(null=False)
+	#Se ja foi enviado
+	enviado = models.BooleanField(default=False, null=False)
+	#Se foi confirmado
 	confirmado = models.BooleanField(default=False, null=False)
 	consultorio = models.ForeignKey(Consultorio, related_name='consultas')
+	
+	def __str__(self):
+		return self.nome
