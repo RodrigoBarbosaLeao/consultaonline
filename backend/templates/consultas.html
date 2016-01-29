@@ -10,20 +10,25 @@
 </head>
 <body>
 <div>
-	<h2>Cadastrar Consulta</h2>
-	<div>
-		<label>Paciente</label>
-		<input type="text">
-		<label>Telefone</label>
-		<input type="text">
-	</div>
-	<input type="button" onclick="alert('Consulta Cadastrada!')" value="Cadastrar">
+	<h2>Registrar Consulta</h2>
+	<form>
+		Paciente:<br>
+		<input type="text" name="paciente">
+		<br>
+		Email:<br>
+		<input type="text" name="email">
+		<br>
+		Data:<br>
+		<input type="text" name="data">
+		<br>
+		Horário:<br>
+		<input type="text" name="hora">
+	</form>
+	<input type="button" onclick="alert('Consulta registrada!')" value="Registrar">
+	<br><br>
+	<a href="">Ver consultas anteriores.</a>
 
-	<div>
-		<label>Consultas</label>
-		
-	</div>
-
+	
 </div>
 </body>
 </html>
